@@ -1,126 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GreenEdge Lawn Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinehurst Lawn Care</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7f5;
+      color: #333;
+    }
 
-header {
-    background: linear-gradient(to right, #1b5e20, #2e7d32);
-    color: white;
-    text-align: center;
-    padding: 25px;
-}
+    header {
+      background: linear-gradient(90deg, #1e7f3f, #38b000);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
+    nav {
+      background: #14532d;
+      padding: 10px;
+      text-align: center;
+    }
 
-.hero {
-    background: url('https://images.unsplash.com/photo-1598514982846-7d4c88bb9d56') center/cover;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 28px;
-    text-shadow: 2px 2px 5px black;
-}
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-}
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1598514982901-5a1c7c4d89c7') no-repeat center/cover;
+      color: white;
+    }
 
-.card {
-    background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-}
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
 
-h2 {
-    color: #2e7d32;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #38b000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
 
-.btn {
-    display: inline-block;
-    padding: 15px 25px;
-    margin: 10px;
-    background: #2e7d32;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-.big-call {
-    font-size: 28px;
-    font-weight: bold;
-    color: #1b5e20;
-}
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
-footer {
-    text-align: center;
-    background: #222;
-    color: white;
-    padding: 15px;
-}
-</style>
+    .card {
+      background: white;
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #14532d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h1>GreenEdge Lawn Services</h1>
-    <p>Affordable • Reliable • Professional Lawn Care</p>
+  <h1>Pinehurst Lawn Care</h1>
+  <p>Professional Lawn Services in Pinehurst, TX</p>
 </header>
 
-<div class="hero">
-    Your Lawn. Perfect Every Time.
-</div>
+<nav>
+  <a href="#">Home</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-<div class="container">
+<section class="hero">
+  <h1>Clean Lawns. Reliable Service.</h1>
+  <p>We keep your yard looking its best year-round.</p>
+  <a href="#contact" class="btn">Get a Free Quote</a>
+</section>
 
-<div class="card">
-    <h2>Services</h2>
-    <ul>
-        <li>✔ Lawn Mowing</li>
-        <li>✔ Edging</li>
-        <li>✔ Weed Eating</li>
-        <li>✔ Yard Cleanup</li>
-        <li>✔ Hedge Trimming</li>
-    </ul>
-</div>
+<section class="section" id="services">
+  <h2>Our Services</h2>
 
-<div class="card">
-    <h2>Pricing</h2>
-    <p class="big-call">Starting at $40</p>
-    <p>FREE Estimates</p>
-</div>
+  <div class="services">
+    <div class="card">
+      <h3>Lawn Mowing</h3>
+      <p>Clean, even cuts every time.</p>
+    </div>
 
-<div class="card" style="text-align:center;">
-    <h2>Call or Text Today</h2>
-    <p class="big-call">(346) 714-5555</p>
+    <div class="card">
+      <h3>Edging & Trimming</h3>
+      <p>Sharp edges for a professional look.</p>
+    </div>
 
-    <a class="btn" href="tel:13467145555">Call Now</a>
-    <a class="btn" href="sms:13467145555">Text Now</a>
-    <a class="btn" href="mailto:greenedgelawnsolution@gmail.com">Email</a>
-</div>
+    <div class="card">
+      <h3>Yard Cleanup</h3>
+      <p>Leaves, debris, and overgrowth cleared.</p>
+    </div>
+  </div>
+</section>
 
-</div>
+<section class="section">
+  <h2>Why Choose Us?</h2>
+  <p>✔ Reliable & On-Time</p>
+  <p>✔ Affordable Pricing</p>
+  <p>✔ Local to Pinehurst, TX</p>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>📍 Pinehurst, TX</p>
+  <p>📞 (Your Phone Number Here)</p>
+  <p>📧 (Your Email Here)</p>
+</section>
 
 <footer>
-© 2026 GreenEdge Lawn Services
+  <p>© 2026 Pinehurst Lawn Care</p>
 </footer>
 
 </body>
