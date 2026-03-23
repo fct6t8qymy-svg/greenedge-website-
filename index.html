@@ -1,224 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pinehurst Lawn Care</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pinehurst Lawn Care</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #000;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
 
-    header {
-      background: #2e7d32;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+header {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
-    nav {
-      background: #1b5e20;
-      padding: 10px;
-      text-align: center;
-    }
+nav {
+  background: #1b5e20;
+  text-align: center;
+  padding: 10px;
+}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .hero {
-      position: relative;
-      padding: 100px 20px;
-      text-align: center;
-      overflow: hidden;
-    }
+.hero {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+}
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url('https://images.unsplash.com/photo-1589927986089-35812388d1f4') no-repeat center/cover;
-      animation: zoomEffect 20s infinite alternate;
-      z-index: 0;
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1589927986089-35812388d1f4') no-repeat center/cover;
+  animation: zoom 20s infinite alternate;
+  z-index: 0;
+}
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(255,255,255,0.75);
-      z-index: 1;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.75);
+  z-index: 1;
+}
 
-    @keyframes zoomEffect {
-      from { transform: scale(1); }
-      to { transform: scale(1.1); }
-    }
+@keyframes zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
 
-    .btn {
-      padding: 12px 25px;
-      margin: 10px;
-      display: inline-block;
-      background: #2e7d32;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+.btn {
+  padding: 12px 25px;
+  margin: 10px;
+  display: inline-block;
+  background: #2e7d32;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
-    .call-btn {
-      background: black;
-    }
+.call-btn {
+  background: black;
+}
 
-    .section {
-      padding: 40px 20px;
-      text-align: center;
-    }
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
 
-    .services, .reviews {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-<section class="section" id="pricing">
-  <h2>Pricing</h2>
-  <p>Affordable, honest pricing for every yard.</p>
+.services, .pricing, .reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
-  <div class="services">
-    <div class="card">
-      <h3>Basic Lawn Cut</h3>
-      <p><strong>$30 – $50</strong></p>
-      <p>Mowing + light cleanup</p>
-    </div>
+.card {
+  background: #f5f5f5;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
 
-    <div class="card">
-      <h3>Full Service</h3>
-      <p><strong>$50 – $80</strong></p>
-      <p>Mowing, edging, trimming</p>
-    </div>
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
 
-    <div class="card">
-      <h3>Yard Cleanup</h3>
-      <p><strong>$80+</strong></p>
-      <p>Leaves, debris, overgrowth removal</p>
-    </div>
-  </div>
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  margin-top: 20px;
+}
 
-  <p style="margin-top:20px;">
-    *Prices may vary based on yard size and condition*
-  </p>
-</section>
-    .card {
-      background: #f5f5f5;
-      padding: 20px;
-      width: 250px;
-      border-radius: 10px;
-    }
-
-    form {
-      max-width: 400px;
-      margin: auto;
-      text-align: left;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      margin-top: 20px;
-    }
-
-    footer {
-      background: #1b5e20;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-  </style>
+footer {
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Pinehurst Lawn Care</h1>
-  <p>Serving Pinehurst, TX & Nearby Areas</p>
+<h1>Pinehurst Lawn Care</h1>
+<p>Serving Pinehurst, TX & Nearby Areas</p>
 </header>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav><a href="#pricing">Pricing</a>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#quote">Instant Quote</a>
+<a href="#contact">Contact</a>
+</nav>
 
 <section class="hero">
-  <div class="hero-content">
-    <h1>Clean Lawns. Reliable Service.</h1>
-    <p>We keep your yard looking its best year-round.</p>
+<div class="hero-content">
+<h1>Clean Lawns. Reliable Service.</h1>
+<p>We keep your yard looking its best year-round.</p>
 
-    <a href="#contact" class="btn">Get a Free Quote</a>
-    <a href="tel:1234567890" class="btn call-btn">Call Now</a>
-  </div>
+<a href="#contact" class="btn">Get a Free Quote</a>
+<a href="tel:1234567890" class="btn call-btn">Call Now</a>
+</div>
 </section>
 
 <section class="section" id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card"><h3>Lawn Mowing</h3></div>
-    <div class="card"><h3>Edging & Trimming</h3></div>
-    <div class="card"><h3>Yard Cleanup</h3></div>
-  </div>
+<h2>Our Services</h2>
+<div class="services">
+<div class="card"><h3>Lawn Mowing</h3></div>
+<div class="card"><h3>Edging & Trimming</h3></div>
+<div class="card"><h3>Yard Cleanup</h3></div>
+</div>
 </section>
 
-<section class="section">
-  <h2>Customer Reviews</h2>
-  <div class="reviews">
-    <div class="card">"Great work every time!" - Mike</div>
-    <div class="card">"Best lawn service in Pinehurst!" - Sarah</div>
-  </div>
+<section class="section" id="pricing">
+<h2>Pricing</h2>
+<div class="pricing">
+<div class="card">
+<h3>Basic Cut</h3>
+<p><strong>$30–$50</strong></p>
+</div>
+
+<div class="card">
+<h3>Full Service</h3>
+<p><strong>$50–$80</strong></p>
+</div>
+
+<div class="card">
+<h3>Cleanup</h3>
+<p><strong>$80+</strong></p>
+</div>
+</div>
+<p>*Prices vary based on yard size and condition*</p>
+</section>
+
+<section class="section" id="quote">
+<h2>Instant Quote</h2>
+
+<select id="yardSize">
+<option value="">Select Yard Size</option>
+<option value="40">Small Yard</option>
+<option value="60">Medium Yard</option>
+<option value="80">Large Yard</option>
+</select>
+
+<select id="serviceType">
+<option value="">Select Service</option>
+<option value="0">Basic Cut</option>
+<option value="20">Full Service (+$20)</option>
+<option value="50">Cleanup (+$50)</option>
+</select>
+
+<button class="btn" onclick="calculateQuote()">Get Estimate</button>
+
+<h3 id="result"></h3>
 </section>
 
 <section class="section" id="contact">
-  <h2>Get a Free Quote</h2>
+<h2>Contact Us</h2>
 
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="tel" placeholder="Phone Number" required>
-    <textarea placeholder="What do you need done?" required></textarea>
-    <button class="btn">Submit</button>
-  </form>
+<p>📍 Pinehurst, TX</p>
+<p>📞 <a href="tel:3467145555">Call Now</a></p>
+<p>📧 greenedgelawnsolution@email.com</p>
 
-  <p>📍 Pinehurst, TX</p>
-  <p>📞 <a href="tel:3467145555">Call Now</a></p>
-  <p>📧 greenedgesolutions@email.com</p>
-
-  <!-- Google Map -->
-  <iframe 
-    src="https://maps.google.com/maps?q=Pinehurst%20Texas&t=&z=13&ie=UTF8&iwloc=&output=embed">
-  </iframe>
+<iframe src="https://maps.google.com/maps?q=Pinehurst%20Texas&z=13&output=embed"></iframe>
 </section>
 
 <footer>
-  <p>© 2026 Pinehurst Lawn Care</p>
+<p>© 2026 Pinehurst Lawn Care</p>
 </footer>
+
+<script>
+function calculateQuote() {
+  let yard = document.getElementById("yardSize").value;
+  let service = document.getElementById("serviceType").value;
+
+  if (!yard || !service) {
+    document.getElementById("result").innerText = "Please select both options.";
+    return;
+  }
+
+  let total = parseInt(yard) + parseInt(service);
+
+  document.getElementById("result").innerText = "Estimated Price: $" + total;
+}
+</script>
 
 </body>
 </html>
