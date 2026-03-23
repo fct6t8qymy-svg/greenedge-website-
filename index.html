@@ -9,8 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #000000;
+      color: #000;
     }
 
     header {
@@ -33,89 +32,62 @@
       font-weight: bold;
     }
 
- .hero {
-  position: relative;
-  padding: 100px 20px;
-  text-align: center;
-  overflow: hidden;
-}
+    .hero {
+      position: relative;
+      padding: 100px 20px;
+      text-align: center;
+      overflow: hidden;
+    }
 
-/* background image layer */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://images.unsplash.com/photo-1589927986089-35812388d1f4') no-repeat center/cover;
-  z-index: 0;
-  animation: zoomEffect 20s ease-in-out infinite alternate;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1589927986089-35812388d1f4') no-repeat center/cover;
+      animation: zoomEffect 20s infinite alternate;
+      z-index: 0;
+    }
 
-/* light overlay for readability */
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.75);
-  z-index: 1;
-}
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.75);
+      z-index: 1;
+    }
 
-/* animation */
-@keyframes zoomEffect {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
+    @keyframes zoomEffect {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  margin: auto;
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
 
-.hero h1 {
-  font-size: 44px;
-  color: black;
-  margin-bottom: 15px;
-}
+    .btn {
+      padding: 12px 25px;
+      margin: 10px;
+      display: inline-block;
+      background: #2e7d32;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
 
-.hero p {
-  font-size: 20px;
-  color: black;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 25px;
-  background: #2e7d32;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-/* call button style */
-.call-btn {
-  background: #000;
-}
+    .call-btn {
+      background: black;
+    }
 
     .section {
       padding: 40px 20px;
       text-align: center;
     }
 
-    .services, .pricing, .reviews {
+    .services, .reviews {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -123,11 +95,29 @@
     }
 
     .card {
-      background: #f9f9f9;
+      background: #f5f5f5;
       padding: 20px;
       width: 250px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
     }
 
     footer {
@@ -143,13 +133,12 @@
 
 <header>
   <h1>Pinehurst Lawn Care</h1>
-  <p>Professional Lawn Services in Pinehurst, TX</p>
+  <p>Serving Pinehurst, TX & Nearby Areas</p>
 </header>
 
 <nav>
   <a href="#">Home</a>
   <a href="#services">Services</a>
-  <a href="#pricing">Pricing</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -159,77 +148,45 @@
     <p>We keep your yard looking its best year-round.</p>
 
     <a href="#contact" class="btn">Get a Free Quote</a>
-    <a href="tel:3467145555" class="btn call-btn">Call Now</a>
+    <a href="tel:1234567890" class="btn call-btn">Call Now</a>
   </div>
 </section>
 
 <section class="section" id="services">
   <h2>Our Services</h2>
   <div class="services">
-    <div class="card">
-      <h3>Lawn Mowing</h3>
-      <p>Clean, even cuts every time.</p>
-    </div>
-
-    <div class="card">
-      <h3>Edging & Trimming</h3>
-      <p>Sharp edges for a professional look.</p>
-    </div>
-
-    <div class="card">
-      <h3>Yard Cleanup</h3>
-      <p>Leaves and debris removal.</p>
-    </div>
+    <div class="card"><h3>Lawn Mowing</h3></div>
+    <div class="card"><h3>Edging & Trimming</h3></div>
+    <div class="card"><h3>Yard Cleanup</h3></div>
   </div>
-</section>
-
-<section class="section" id="pricing">
-  <h2>Pricing</h2>
-  <div class="pricing">
-    <div class="card">
-      <h3>Basic Cut</h3>
-      <p>$30 - $50</p>
-    </div>
-
-    <div class="card">
-      <h3>Full Service</h3>
-      <p>$50 - $80</p>
-    </div>
-
-    <div class="card">
-      <h3>Yard Cleanup</h3>
-      <p>$80+</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Why Choose Us?</h2>
-  <p>✔ Reliable & On-Time</p>
-  <p>✔ Affordable Pricing</p>
-  <p>✔ Local to Pinehurst, TX</p>
 </section>
 
 <section class="section">
   <h2>Customer Reviews</h2>
   <div class="reviews">
-    <div class="card">
-      <p>"Great service! My lawn has never looked better."</p>
-      <strong>- John D.</strong>
-    </div>
-
-    <div class="card">
-      <p>"Very reliable and affordable. Highly recommend."</p>
-      <strong>- Sarah M.</strong>
-    </div>
+    <div class="card">"Great work every time!" - Mike</div>
+    <div class="card">"Best lawn service in Pinehurst!" - Sarah</div>
   </div>
 </section>
 
 <section class="section" id="contact">
-  <h2>Contact Us</h2>
+  <h2>Get a Free Quote</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <textarea placeholder="What do you need done?" required></textarea>
+    <button class="btn">Submit</button>
+  </form>
+
   <p>📍 Pinehurst, TX</p>
-  <p>📞 (346)-714-5555</p>
-  <p>📧 (greenedgelawnsolution@gmail.com)</p>
+  <p>📞 <a href="tel:3467145555">Call Now</a></p>
+  <p>📧 greenedgesolutions@email.com</p>
+
+  <!-- Google Map -->
+  <iframe 
+    src="https://maps.google.com/maps?q=Pinehurst%20Texas&t=&z=13&ie=UTF8&iwloc=&output=embed">
+  </iframe>
 </section>
 
 <footer>
